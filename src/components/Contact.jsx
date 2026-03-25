@@ -10,10 +10,10 @@ const Contact = () => {
           I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
         </p>
         <div className="contact-links">
-          <a href="mailto:noman@example.com" className="btn-neon">Email Me</a>
-          <a href="#" className="btn-neon btn-secondary" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="#" className="btn-neon" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="#" className="btn-neon btn-secondary" target="_blank" rel="noreferrer">WhatsApp</a>
+          <a href="mailto:muhammadnomanqamar3@gmail.com" target="_blank" className="btn-neon">Email Me</a>
+          <a href="https://www.linkedin.com/in/muhammad-noman-qamar-925726251/" target="_blank" className="btn-neon btn-secondary" aria-disabled="true">LinkedIn</a>
+          <a href='https://github.com/noman434358' target="_blank" className="btn-neon" aria-disabled="true">GitHub</a>
+          <a href="https://wa.me/923357233034" target="_blank" className="btn-neon btn-secondary" aria-disabled="true">WhatsApp</a>
         </div>
       </div>
     </section>

@@ -7,19 +7,19 @@ const Projects = () => {
       name: 'All Languages Voice Translator',
       desc: 'Full-stack web app for real-time voice translation across multiple languages with high precision and low latency.',
       tech: ['React.js', 'Node.js', 'MongoDB', 'REST APIs'],
-      link: '#'
+      link: ''
     },
     {
       name: 'LiDAR Web Integration',
       desc: 'Integrated an iOS LiDAR scanning application with a comprehensive web dashboard for real-time 3D data visualization.',
       tech: ['React.js', 'Node.js', 'Express.js', 'Socket.io'],
-      link: '#'
+      link: ''
     },
     {
       name: 'Virtual Number Management',
       desc: 'Credit purchase and renewal system featuring robust expiration logic, billing cycles, and automated number management.',
       tech: ['MERN Stack', 'MySQL'],
-      link: '#'
+      link: ''
     }
   ];
 
@@ -37,7 +37,15 @@ const Projects = () => {
               </div>
             </div>
             <div className="project-actions">
-              <a href={proj.link} className="btn-neon" target="_blank" rel="noreferrer">Live Demo / GitHub</a>
+              {proj.link ? (
+                <a href={proj.link} className="btn-neon" target="_blank" rel="noreferrer">
+                  Live Demo / GitHub
+                </a>
+              ) : (
+                <span className="btn-neon is-disabled" aria-disabled="true">
+                  Link Coming Soon
+                </span>
+              )}
             </div>
           </div>
         ))}

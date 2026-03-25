@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Hero.css';
 
 const Hero = () => {
+  const [imageUnavailable, setImageUnavailable] = useState(false);
+
   return (
     <header className="hero-section container">
       <div className="hero-content">
@@ -16,7 +18,18 @@ const Hero = () => {
         </div>
       </div>
       <div className="hero-image-container floating">
-        <img src="/hero_image.png" alt="Futuristic Antigravity Developer" className="hero-image" />
+        {imageUnavailable ? (
+          <div className="hero-image hero-image-fallback glass-panel">
+            <p>Portfolio Preview</p>
+          </div>
+        ) : (
+          <img
+            src="/hero_image.png"
+            alt="Futuristic Antigravity Developer"
+            className="hero-image"
+            onError={() => setImageUnavailable(true)}
+          />
+        )}
       </div>
     </header>
   );
