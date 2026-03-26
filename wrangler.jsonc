@@ -1,0 +1,8 @@
+// Cloudflare Wrangler — https://developers.cloudflare.com/workers/wrangler/configuration/
+// Deploy: npm run build && npx wrangler pages deploy dist --project-name=mine-portfolio
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "myportfolio",
+  "compatibility_date": "2025-03-26",
+  "pages_build_output_dir": "dist"
+}
